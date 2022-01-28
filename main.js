@@ -1,3 +1,6 @@
+const newTransaction = document.getElementsByClassName('button new');
+const cancelTransaction = document.getElementsByClassName('button cancel');
+
 const modal = {
     open(){
         //abrir o modal
@@ -16,4 +19,12 @@ const modal = {
                 .remove('active')
     }
 };
+
+newTransaction[0].addEventListener("click", event => {
+    modal.open();
+});
+
+cancelTransaction[0].addEventListener("click", event => {
+    modal.close();
+});
 
